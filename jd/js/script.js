@@ -202,8 +202,10 @@ window.onscroll = function () {
     if (search != null) {
         if (document.body.scrollTop > 115) {
             search.style.background = "red";
+            search.style.top = "0";
         } else {
             search.style.background = "transparent";
+            search.style.top = "auto";
         }
     }
 
