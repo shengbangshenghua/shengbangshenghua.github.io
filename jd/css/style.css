@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+    background: #f5f5f5;
+}
+
+/*底部导航*/
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #cbcbcb;
+    background: #fff;
+    z-index: 100;
+}
+
+nav li {
+    list-style: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav ul::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+nav a {
+    color: #5d5f6a;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active{
+    color: #f23030;
+    text-decoration: none;
+}
+
+nav .fa {
+    font-size: 24px;
+    margin-bottom: 3px;
+    position: relative;
+}
+
+nav span {
+    display: block;
+}
+
+nav .hot {
+    width: 10px;
+    height: 10px;
+    background: #ff0000;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    right: -8px;
+    top: -2px;
+}
+
+/*网站的顶部搜索条*/
+
+.search {
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /*background: #5f3543;*/
+    color: #fff;
+    /*把搜索条固定在网站顶部*/
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: .5s;
+}
+
+.search::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.search .left,
+.search .center,
+.search .right {
+    float: left;
+}
+
+.search .left,
+.search .right {
+    width: 20%;
+    text-align: center;
+
+}
+
+.search .left span,
+.search .right span {
+    display: block;
+    line-height: 12px;
+}
+
+.search .left i,
+.search .right i {
+    font-size: 22px;
+}
+
+.search .center {
+    width: 60%;
+    position: relative;
+}
+
+.search .center input {
+    width: 100%;
+    height: 36px;
+    border-radius: 25px;
+    border: none;
+    padding: 0 36px;
+    outline: none;
+}
+
+.search .center i {
+    font-size: 20px;
+    color: #9b9b9b;
+    position: absolute;
+    left: 12px;
+    top: 8px;
+}
+
+.search .center i.fa-microphone {
+    left: auto;
+    right: 15px;
+}
+
+/*轮播图部分的样式*/
+
+.banner {
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+/*首屏APP部分的样式*/
+
+.app {
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.app::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.app > div {
+    width: 20%;
+    float: left;
+    padding: 5px;
+    text-align: center;
+}
+
+.app img {
+    width: 100%;
+    display: block;
+    padding: 7px;
+}
+
+.app a {
+    text-decoration: none;
+    color: #848689;
+}
+
+/*京东快报部分的样式*/
+
+.news .new {
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.news .container {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+}
+
+.news a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.news em {
+    color: red;
+    font-style: inherit;
+    margin-right: 5px;
+}
+
+.news::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.news .left {
+    float: left;
+    width: 24%;
+}
+
+.news .center {
+    float: left;
+    width: 60%;
+    overflow: hidden;
+    height: 16px;
+}
+
+.news .right {
+    float: left;
+    width: 16%;
+    text-align: right;
+}
+
+.news .center a {
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news .transition {
+    transition: 1s;
+}
+
+/*京东秒杀部分的样式*/
+.miaosha {
+
+}
+
+.miaosha .title {
+
+}
+
+.miaosha .title::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.miaosha .title .left {
+    float: left;
+    width: 67%;
+    background: url("../img/jingdongmiaosha.jpg");
+    padding: 5px 0 5px 5px;
+    background-size: cover;
+}
+
+.miaosha .title .left .tit {
+    color: #f02b2b;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.miaosha .title .left i {
+    background: url("../img/naozhong.jpg");
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+
+.miaosha .title .left .h,
+.miaosha .title .left .m,
+.miaosha .title .left .s {
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0 3px;
+}
+
+.miaosha .title .right {
+    float: left;
+    width: 33%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.miaosha .title .right a {
+    color: #f02b2b;
+    text-decoration: none;
+    position: relative;
+    top: 11px;
+}
+
+.miaosha .title .right i {
+    background: url("../img/jiantou.jpg");
+    width: 12px;
+    height: 12px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.miaosha .shop {
+    overflow: scroll;
+}
+
+.miaosha .shop ul {
+    width: 700px;
+}
+
+.miaosha .shop ul::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.miaosha .shop li {
+    float: left;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    list-style: none;
+}
+
+.miaosha .shop li img {
+    width: 100%;
+}
+
+.miaosha .shop li a {
+    text-decoration: none;
+}
+
+.miaosha .shop li p {
+    color: #f62d2d;
+    font-size: 14px;
+}
+
+.miaosha .shop li p del {
+    color: #ababab;
+    font-size: 12px;
+}
+
+.miaosha .shop .hot {
+    background: url("../img/remai.png");
+}
+
+.miaosha .shop .tuijian {
+    background: url("../img/tuijian.png");
+}
+
+.miaosha .shop .ico {
+    width: 38px;
+    height: 14px;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    left: 17px;
+}
+
+/*京东APP首页发现部分的样式*/
+.faxian {
+    background: #fff;
+}
+
+.faxian h3 {
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+/*发现频道部分的h3标题的样式*/
+.faxian .h31 {
+    color: #369bf4;
+}
+
+.faxian .h32 {
+    color: #ff8104;
+}
+
+.faxian .h33 {
+    color: #ffad00;
+}
+
+.faxian .h34 {
+    color: #ff0018;
+}
+
+.faxian .h35 {
+    color: #e763ed;
+}
+
+.faxian .h36 {
+    color: #ff1652;
+}
+
+.faxian p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.faxian a{
+    display: block;
+}
+.faxian img {
+    width: 100%;
+    padding: 5px;
+    display: block;
+    height: 90px;
+}
+
+.faxian .row {
+    margin: 0;
+}
+
+.faxian .col-xs-6 {
+    padding: 0;
+}
+
+/*发现区域的边框样式*/
+.faxian .bt {
+    border-top: 1px solid #ccc;
+}
+
+.faxian .bl {
+    border-left: 1px solid #ccc;
+}
+
+.faxian .br {
+    border-right: 1px solid #ccc;
+}
+
+.faxian .bb {
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+/*floor样式开始*/
+.floor {
+    margin-bottom: 500px;
+}
+.floor img{
+    width: 100%;
+
+}
+.floor i.ziying{
+    background: url("../img/floor/zy.jpg");
+    width: 35px;
+    height: 18px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.floor i.quanqiugou{
+    background: url("../img/floor/qqg.jpg");
+    width: 51px;
+    height: 18px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.floor .row{
+    margin-left:-4px;
+    margin-right:-4px;
+}
+.floor .col-xs-6{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.floor .container-fluid{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#top{
+    width: 50px;
+    height: 50px;
+    background: url("../img/top.png");
+    background-size: cover;
+    display: inline-block;
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    display: none;
+}
+
+
+
+
+/*分类页面的样式*/
+.sort .container-fluid{
+    padding: 0;
+}
+.sort .row{
+    margin:0;
+}
+.sort .col-xs-3{
+    padding: 0;
+}
+.sort .col-xs-9{
+    padding: 0;
+}
+
+.sort .main li{
+    list-style: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+.sort .main img{
+    width: 100%;
+}
+.sort .main h3{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.sort .main{
+    text-align: center;
+}
+
+
+
+
+
+/*sort分类页面的样式*/
+
+
+
+.sort-nav > li{
+
+}
+.sort .sort-nav li.active{
+    background: #fff;
+    color: red;
+}
+
+.sort-list > div{
+    display: none;
+}
+
+.sort-list >div.active{
+    display: block;
+}
+
+.ad::after{
+    display: table;
+    content:"";
+    clear: both;
+}
+.ad div{
+    float: left;
+    padding: 15px 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+.ad div:nth-of-type(1){
+    width: 70%;
+    background: #000;
+}
+.ad div:nth-of-type(2){
+    width: 30%;
+    background: red;
+}
+.ad #close{
+    padding: 5px;
+}
